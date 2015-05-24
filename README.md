@@ -1,2 +1,6 @@
-# easyrecyclerview
-The faster way to use a recyclerview. If you just want a list with items and a divider option then this is for you.
+# Easy Recyclerview
+The fastest way to use a recyclerview. Create a damn list with (almost)one line of code.
+
+Documentation will be added soon
+
+
