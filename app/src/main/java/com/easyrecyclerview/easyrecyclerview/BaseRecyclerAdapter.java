@@ -52,7 +52,13 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
             //create new instance of the given holder class. Invoking constructor with generics
             holder = viewHolderClass.getDeclaredConstructor(View.class).newInstance(v);
 
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
 

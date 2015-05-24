@@ -3,9 +3,10 @@ package com.easyrecyclerview.easyrecyclerview.multi;
 import android.support.annotation.LayoutRes;
 import android.view.ViewGroup;
 
-import com.yqritc.recyclerviewflexibledivider.sample.recyclerview.BaseRecyclerAdapter;
-import com.yqritc.recyclerviewflexibledivider.sample.recyclerview.BaseViewHolder;
-import com.yqritc.recyclerviewflexibledivider.sample.recyclerview.ListCallbacks;
+import com.easyrecyclerview.easyrecyclerview.BaseRecyclerAdapter;
+import com.easyrecyclerview.easyrecyclerview.BaseViewHolder;
+import com.easyrecyclerview.easyrecyclerview.ListCallbacks;
+
 
 /**
  * Created by arthur on 5/22/15.

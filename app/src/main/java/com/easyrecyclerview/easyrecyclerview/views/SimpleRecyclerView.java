@@ -8,6 +8,7 @@ import android.util.AttributeSet;
 
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
+
 /**
  * Created by arthur on 5/24/15.
  */

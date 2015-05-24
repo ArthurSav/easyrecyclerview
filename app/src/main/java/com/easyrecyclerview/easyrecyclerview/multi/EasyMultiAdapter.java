@@ -3,8 +3,9 @@ package com.easyrecyclerview.easyrecyclerview.multi;
 import android.app.Activity;
 import android.view.ViewGroup;
 
-import com.yqritc.recyclerviewflexibledivider.sample.recyclerview.BaseRecyclerAdapter;
-import com.yqritc.recyclerviewflexibledivider.sample.recyclerview.BaseViewHolder;
+
+import com.easyrecyclerview.easyrecyclerview.BaseRecyclerAdapter;
+import com.easyrecyclerview.easyrecyclerview.BaseViewHolder;
 
 import java.util.ArrayList;
 
