@@ -5,12 +5,12 @@ import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.view.ViewGroup;
 
-
 import com.easyrecyclerview.easyrecyclerview.BaseRecyclerAdapter;
 import com.easyrecyclerview.easyrecyclerview.BaseViewHolder;
 import com.easyrecyclerview.easyrecyclerview.ListCallbacks;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Base recyclerview adapter
@@ -21,7 +21,7 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
     /**
      * The list of items to display
      */
-    private ArrayList<Item> items = new ArrayList<>();
+    private List<Item> items = new ArrayList<>();
 
     /**
      * Callbacks
@@ -39,7 +39,6 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
      */
     @NonNull
     private Class<? extends ViewHolder> cls;
-
 
 
     /**
@@ -64,7 +63,7 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
 
     @Override
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        if (listCallbacks !=null) listCallbacks.onBindViewHolder(viewHolder, i);
+        if (listCallbacks != null) listCallbacks.onBindViewHolder(viewHolder, i);
     }
 
 
@@ -78,71 +77,66 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
     /**
      * View holder class
      * We use it to construct the view holder via abstraction onCreateViewHolder()
+     *
      * @return
      */
-    public EasyAdapter setViewHolderClass(Class<? extends ViewHolder> cls){
+    public EasyAdapter setViewHolderClass(Class<? extends ViewHolder> cls) {
         this.cls = cls;
         return this;
     }
 
     /**
-     *  Set list items
+     * Set list items
+     *
      * @param items items to display
      * @return
      */
 
-    public EasyAdapter setItems(@NonNull ArrayList<Item> items){
+    public EasyAdapter setItems(@NonNull ArrayList<Item> items) {
         this.items = items;
         return this;
     }
 
 
-    public EasyAdapter setLayoutId(@LayoutRes int layoutId){
+    public EasyAdapter setLayoutId(@LayoutRes int layoutId) {
         this.layoutId = layoutId;
-        return  this;
+        return this;
     }
 
-    public EasyAdapter setCallbacks(ListCallbacks<ViewHolder> callbacks){
+    public EasyAdapter setCallbacks(ListCallbacks<ViewHolder> callbacks) {
         this.listCallbacks = callbacks;
         return this;
     }
 
 
-
     /*****************************************************
      * ---------------- * Getters * --------------------
-     *
-     *
-     *
      ****************************************************/
 
 
     @Override
     public Item getItem(int position) {
-         return items.get(position);
+        return items.get(position);
     }
 
     @Override
-    public ArrayList<Item> getItems() {
+    public List<Item> getItems() {
         return items;
     }
 
 
     /*****************************************************
      * ---------------- * Builder * --------------------
-     *
-     *
-     *
      ****************************************************/
 
     public static class Builder<ViewHolder extends BaseViewHolder, Item> {
 
-        private ArrayList<Item> items;
+        private List<Item> items;
         private ListCallbacks<ViewHolder> listCallbacks;
         private int layoutId;
         private Class<? extends ViewHolder> cls;
 
-        public Builder items(ArrayList<Item> items) {
+        public Builder items(List<Item> items) {
             this.items = items;
             return this;
         }

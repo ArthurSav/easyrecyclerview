@@ -12,15 +12,15 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 /**
  * Created by arthur on 5/24/15.
  */
-public class SimpleRecyclerView extends RecyclerView {
+public class EasyRecyclerView extends RecyclerView {
 
     LinearLayoutManager manager;
 
-    public SimpleRecyclerView(Context context) {
+    public EasyRecyclerView(Context context) {
         super(context);
     }
 
-    public SimpleRecyclerView(Context context, AttributeSet attrs) {
+    public EasyRecyclerView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
         setupManager(context);

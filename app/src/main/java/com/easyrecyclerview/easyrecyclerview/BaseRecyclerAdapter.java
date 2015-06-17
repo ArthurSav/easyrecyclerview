@@ -66,7 +66,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
     }
 
 
-    public abstract ArrayList<Item> getItems();
+    public abstract List<Item> getItems();
 
     public abstract Item getItem(int position);
 
