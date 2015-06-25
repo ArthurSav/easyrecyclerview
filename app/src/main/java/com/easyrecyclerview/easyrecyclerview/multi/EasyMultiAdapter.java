@@ -8,6 +8,7 @@ import com.easyrecyclerview.easyrecyclerview.BaseRecyclerAdapter;
 import com.easyrecyclerview.easyrecyclerview.BaseViewHolder;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * This adapter displays multiple types of views in a recyclerview
@@ -23,12 +24,13 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
     /**
      * Items to display
      */
-    private ArrayList<Item> items;
+    private List<Item> items;
+
 
     /**
      * Types of views
      */
-    private ArrayList<BaseBinder> types;
+    private List<BaseBinder> types;
 
     /**
      * Constructor
@@ -86,7 +88,7 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
     }
 
     @Override
-    public ArrayList<Item> getItems(){
+    public List<Item> getItems(){
         return items;
     }
 
@@ -99,16 +101,16 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
 
     public static class Builder<Item extends ItemViewType> {
 
-        private ArrayList<Item> items;
-        private ArrayList<BaseBinder> types = new ArrayList<>();
+        private List<Item> items;
+        private List<BaseBinder> types = new ArrayList<>();
 
 
-        public Builder items(ArrayList<Item> items) {
+        public Builder items(List<Item> items) {
             this.items = items;
             return this;
         }
 
-        public Builder types(ArrayList<BaseBinder> types) {
+        public Builder types(List<BaseBinder> types) {
             this.types = types;
             return this;
         }
@@ -134,12 +136,12 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
      *
      ****************************************************/
 
-    public EasyMultiAdapter setItems(ArrayList<Item> items) {
+    public EasyMultiAdapter setItems(List<Item> items) {
         this.items = items;
         return this;
     }
 
-    public EasyMultiAdapter setTypes(ArrayList<BaseBinder> types) {
+    public EasyMultiAdapter setTypes(List<BaseBinder> types) {
         this.types = types;
         return this;
     }
