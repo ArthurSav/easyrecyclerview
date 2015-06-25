@@ -49,6 +49,7 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
      */
     public EasyMultiAdapter(Activity activity) {
         super(activity);
+        this.types = new ArrayList<>();
     }
 
 
