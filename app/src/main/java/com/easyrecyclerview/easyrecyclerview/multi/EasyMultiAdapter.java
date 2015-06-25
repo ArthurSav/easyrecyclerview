@@ -41,6 +41,14 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
         this.types = builder.types;
     }
 
+    /**
+     * Intended for use without the builder. Make sure you add use the setters
+     * @param activity
+     */
+    public EasyMultiAdapter(Activity activity) {
+        super(activity);
+    }
+
 
     @Override
     public BaseViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -119,6 +127,26 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
         }
     }
 
+    /*****************************************************
+     * ---------------- * Setters * --------------------
+     *
+     *
+     *
+     ****************************************************/
 
+    public EasyMultiAdapter setItems(ArrayList<Item> items) {
+        this.items = items;
+        return this;
+    }
+
+    public EasyMultiAdapter setTypes(ArrayList<BaseBinder> types) {
+        this.types = types;
+        return this;
+    }
+
+    public EasyMultiAdapter setType(BaseBinder binder){
+        types.add(binder);
+        return this;
+    }
 
 }
