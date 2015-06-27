@@ -104,7 +104,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
      * Will add new items to the current list
      * @param items
      */
-    public void addItems(@NonNull ArrayList<Item> items) {
+    public void addItems(@NonNull List<Item> items) {
 
         int previousCount = getItemPositions();
 
@@ -146,7 +146,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
      * Replaces current list of items
      * @param items
      */
-    public void replaceItems(@NonNull ArrayList<Item> items){
+    public void replaceItems(@NonNull List<Item> items){
 
         getItems().clear();
         getItems().addAll(items);
