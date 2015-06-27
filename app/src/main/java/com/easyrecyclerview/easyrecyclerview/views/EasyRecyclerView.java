@@ -41,4 +41,23 @@ public class EasyRecyclerView extends RecyclerView {
     public void setDivider(HorizontalDividerItemDecoration horizontalDividerItemDecoration){
         addItemDecoration(horizontalDividerItemDecoration);
     }
+
+    /**
+     * Scrolls to last position
+     */
+    public void scrollToLast(){
+
+        Adapter adapter = getAdapter();
+
+        if (adapter !=null) {
+
+            int count = adapter.getItemCount();
+
+            //convert size to positions
+            count = count > 0? count - 1: 0;
+
+            scrollToPosition(count);
+        }
+
+    }
 }
