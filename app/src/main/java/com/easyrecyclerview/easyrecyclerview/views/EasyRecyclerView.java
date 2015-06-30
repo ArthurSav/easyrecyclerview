@@ -26,7 +26,7 @@ public class EasyRecyclerView extends RecyclerView {
         setupManager(context);
     }
 
-    private void setupManager(Context context){
+    protected void setupManager(Context context){
 
         manager = new LinearLayoutManager(context);
         manager.setOrientation(OrientationHelper.VERTICAL);
