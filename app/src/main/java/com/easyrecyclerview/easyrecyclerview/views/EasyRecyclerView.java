@@ -31,8 +31,17 @@ public class EasyRecyclerView extends RecyclerView {
         manager = new LinearLayoutManager(context);
         manager.setOrientation(OrientationHelper.VERTICAL);
 
+        beforeManagerSetup(manager);
+
         setLayoutManager(manager);
     }
+
+    /**
+     * Use it to customize the layout manager before we set it up
+     * @param linearLayoutManager
+     */
+    public void beforeManagerSetup(LinearLayoutManager linearLayoutManager){}
+
 
     public void setDivider(boolean set){
         if (set) addItemDecoration(new HorizontalDividerItemDecoration.Builder(getContext()).build());
