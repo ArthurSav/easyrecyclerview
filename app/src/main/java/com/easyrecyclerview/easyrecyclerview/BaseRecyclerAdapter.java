@@ -152,7 +152,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
 
         getItems().addAll(items);
 
-        notifyItemsReplaced();
+        notifyDataSetChanged();
     }
 
     /**
@@ -173,6 +173,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
      *
      * [NOTE] There's a bug when using notifyItemRangeChanged() with count=0 & position=0, so we have to use notifyDataSetChanged()
      */
+    @Deprecated
     private void notifyItemsReplaced(){
 
         int count = getItemCount();
