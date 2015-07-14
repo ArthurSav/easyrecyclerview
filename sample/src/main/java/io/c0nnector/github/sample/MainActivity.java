@@ -25,14 +25,9 @@ public class MainActivity extends AppCompatActivity implements ListCallbacks<Hol
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_easyrecyclerview);
+        setContentView(R.layout.recyclerview_simple);
 
-        startTimer(10, new TimerListener() {
-            @Override
-            public void onFinish() {
-                setupAdapter();
-            }
-        });
+        setupAdapter();
     }
 
 
@@ -68,31 +63,6 @@ public class MainActivity extends AppCompatActivity implements ListCallbacks<Hol
         }
 
         return items;
-    }
-
-    /*****************************************************
-     * ---------------- * Timer * --------------------
-     *
-     *
-     *
-     ****************************************************/
-
-    public void startTimer(int sec, final TimerListener listener){
-        new CountDownTimer(sec * 1000, 1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-            }
-
-            @Override
-            public void onFinish() {
-                listener.onFinish();
-            }
-        }.start();
-    }
-
-    public interface TimerListener {
-        void onFinish();
     }
 
 }
