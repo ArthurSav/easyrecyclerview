@@ -36,6 +36,6 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile 'com.github.c0nnector:easyrecyclerview:1.6.1'
+    compile 'com.github.c0nnector:easyrecyclerview:1de035ebc8'
     compile 'com.github.c0nnector:EasyOverlay:4ffee8e49d'
 }
