@@ -57,7 +57,6 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
-
         return getViewHolder(parent, layoutId, cls);
     }
 

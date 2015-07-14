@@ -150,7 +150,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
 
         getItems().clear();
 
-        if (items.size() > 0) getItems().addAll(items);
+        getItems().addAll(items);
 
         notifyItemsReplaced();
     }
