@@ -9,7 +9,7 @@ android {
     buildToolsVersion "23.0.0 rc2"
 
     defaultConfig {
-        applicationId "io.c0nnector.github.sample"
+        applicationId "com.easyrecyclerview.sample"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1
@@ -36,6 +36,6 @@ repositories {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
-    compile project(':app')
-    compile 'com.github.c0nnector:EasyOverlay:1.1'
+    compile 'com.github.c0nnector:easyrecyclerview:1.6.1'
+    compile 'com.github.c0nnector:EasyOverlay:4ffee8e49d'
 }

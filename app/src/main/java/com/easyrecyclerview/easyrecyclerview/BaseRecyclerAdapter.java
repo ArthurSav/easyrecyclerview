@@ -151,7 +151,7 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
         getItems().clear();
         getItems().addAll(items);
 
-        notifyItemRangeChanged(0, getItemCount());
+        notifyItemsReplaced();
     }
 
     /**
@@ -165,6 +165,20 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
         notifyItemRemoved(position);
 
         notifyItemRangeChanged(position, getItemCount());
+    }
+
+    /**
+     * Use this to refresh replaced items
+     *
+     * [NOTE] There's a bug when using notifyItemRangeChanged() with count=0 & position=0, so we have to use notifyDataSetChanged()
+     */
+    private void notifyItemsReplaced(){
+
+        int count = getItemCount();
+
+        if (count == 0) notifyDataSetChanged();
+
+        else notifyItemRangeChanged(0, getItemCount());
     }
 
     /**

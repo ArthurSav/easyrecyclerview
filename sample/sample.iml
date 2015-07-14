@@ -73,7 +73,8 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.andkulikov/transitions-everywhere/1.4.0/jars" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.c0nnector/EasyOverlay/1.1/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.c0nnector/EasyOverlay/4ffee8e49d/jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/com.github.c0nnector/easyrecyclerview/1.6.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/exploded-aar/me.tatarka.holdr/holdr/1.5.1/jars" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jacoco" />
@@ -92,12 +93,14 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="EasyOverlay-1.1" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-flexibledivider-1.2.4" level="project" />
     <orderEntry type="library" exported="" name="transitions-everywhere-1.4.0" level="project" />
+    <orderEntry type="library" exported="" name="easyrecyclerview-1.6.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-22.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.2.0" level="project" />
+    <orderEntry type="library" exported="" name="recyclerview-v7-22.2.0" level="project" />
     <orderEntry type="library" exported="" name="holdr-1.5.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.2.0" level="project" />
-    <orderEntry type="module" module-name="app" exported="" />
+    <orderEntry type="library" exported="" name="EasyOverlay-4ffee8e49d" level="project" />
   </component>
 </module>

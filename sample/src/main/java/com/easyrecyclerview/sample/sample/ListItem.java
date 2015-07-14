@@ -1,4 +1,4 @@
-package io.c0nnector.github.sample;
+package com.easyrecyclerview.sample.sample;
 
 /**
  * Created by arthur on 7/13/15.

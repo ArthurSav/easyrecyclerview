@@ -92,7 +92,7 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
      * @return
      */
 
-    public EasyAdapter setItems(@NonNull ArrayList<Item> items) {
+    public EasyAdapter setItems(@NonNull List<Item> items) {
         this.items = items;
         return this;
     }
