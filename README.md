@@ -18,6 +18,6 @@ And this to your dependencies:
 
 ```
 dependencies {
-	        compile 'com.github.c0nnector:easyrecyclerview:1.6.1'
+	        compile 'com.github.c0nnector:easyrecyclerview:1.6.5'
 	}
 ```

@@ -169,21 +169,6 @@ public abstract class BaseRecyclerAdapter<ViewHolder extends BaseViewHolder, Ite
     }
 
     /**
-     * Use this to refresh replaced items
-     *
-     * [NOTE] There's a bug when using notifyItemRangeChanged() with count=0 & position=0, so we have to use notifyDataSetChanged()
-     */
-    @Deprecated
-    private void notifyItemsReplaced(){
-
-        int count = getItemCount();
-
-        if (count == 0) notifyDataSetChanged();
-
-        else notifyItemRangeChanged(0, getItemCount());
-    }
-
-    /**
      * Returns true if the item exists in the list
      * @param position
      * @return
