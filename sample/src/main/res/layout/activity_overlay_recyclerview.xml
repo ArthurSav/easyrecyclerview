@@ -12,12 +12,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/layout_list_overlay"
-        android:layout_below="@+id/btnClear"
-        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"

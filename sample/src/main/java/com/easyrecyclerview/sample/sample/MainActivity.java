@@ -13,8 +13,6 @@ import com.easyrecyclerview.sample.holdr.Holdr_ListItemRow;
 
 import java.util.ArrayList;
 
-import io.c0nnector.easyoverlay.RelativeListOverlay;
-
 
 public class MainActivity extends AppCompatActivity implements ListCallbacks<Holdr_ListItemRow>{
 
@@ -22,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements ListCallbacks<Hol
 
 
     EasyRecyclerView easyRecyclerView;
-    RelativeListOverlay relativeListOverlay;
+    //RelativeListOverlay relativeListOverlay;
 
 
     Button btnClear;
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements ListCallbacks<Hol
     public void setupViews(){
 
         easyRecyclerView = (EasyRecyclerView) findViewById(R.id.recyclerView);
-        relativeListOverlay = (RelativeListOverlay) findViewById(R.id.relativeListOverlay);
+        //relativeListOverlay = (RelativeListOverlay) findViewById(R.id.relativeListOverlay);
 
         btnClear = (Button) findViewById(R.id.btnClear);
         btnAdd = (Button) findViewById(R.id.btnAdd);
@@ -67,8 +65,8 @@ public class MainActivity extends AppCompatActivity implements ListCallbacks<Hol
     public void setupAdapter(){
 
         //add empty view
-        relativeListOverlay.setRecyclerViewOverlay(easyRecyclerView);
-        relativeListOverlay.setEmptyView("OMG EMPTY");
+//        relativeListOverlay.setRecyclerViewOverlay(easyRecyclerView);
+//        relativeListOverlay.setEmptyView("OMG EMPTY");
 
         adapter = new EasyAdapter.Builder<Holdr_ListItemRow, ListItem>()
                 .layoutId(Holdr_ListItemRow.LAYOUT)

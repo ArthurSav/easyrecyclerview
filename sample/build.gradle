@@ -39,5 +39,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.2.0'
 
     compile 'com.github.c0nnector:easyrecyclerview:1.6.5'
-    compile 'com.github.c0nnector:EasyOverlay:1.2'
+    //compile 'com.github.c0nnector:EasyOverlay:1.2'
 }
