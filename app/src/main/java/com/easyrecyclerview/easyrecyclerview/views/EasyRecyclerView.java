@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
-import android.view.View;
 
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
@@ -22,13 +21,20 @@ public class EasyRecyclerView extends RecyclerView {
 
 
     public EasyRecyclerView(Context context) {
+
         super(context);
     }
 
     public EasyRecyclerView(Context context, AttributeSet attrs) {
-        super(context, attrs);
 
-        setupManager(context);
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+
+        setupManager(getContext());
     }
 
     protected void setupManager(Context context) {
@@ -87,38 +93,41 @@ public class EasyRecyclerView extends RecyclerView {
      * ---------------- * View overlays * --------------------
      ****************************************************/
 
-    public void setAdapterChangeListener(AdapterChangeListener listener){
+    public void setAdapterChangeListener(AdapterChangeListener listener) {
         this.listener = listener;
     }
 
     final private AdapterDataObserver observer = new AdapterDataObserver() {
+
         @Override
         public void onChanged() {
+
             checkIfEmpty();
         }
 
         @Override
         public void onItemRangeInserted(int positionStart, int itemCount) {
+
             checkIfEmpty();
         }
 
         @Override
         public void onItemRangeRemoved(int positionStart, int itemCount) {
+
             checkIfEmpty();
         }
     };
 
     /**
-     * Called when there are changes in the adapter size.
-     * Make sure you register a listener
+     * Called when there are changes in the adapter size. Make sure you register a listener
      */
     void checkIfEmpty() {
 
         Adapter adapter = getAdapter();
 
-        if (adapter != null && listener !=null) {
+        if (adapter != null && listener != null) {
 
-           listener.onAdapterChange(adapter, adapter.getItemCount());
+            listener.onAdapterChange(adapter, adapter.getItemCount());
         }
     }
 
@@ -142,6 +151,7 @@ public class EasyRecyclerView extends RecyclerView {
 
 
     public interface AdapterChangeListener {
+
         void onAdapterChange(@NonNull Adapter adapter, int count);
     }
 
