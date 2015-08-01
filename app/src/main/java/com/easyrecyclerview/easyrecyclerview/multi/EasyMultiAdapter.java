@@ -1,6 +1,7 @@
 package com.easyrecyclerview.easyrecyclerview.multi;
 
 import android.app.Activity;
+import android.content.Context;
 import android.view.ViewGroup;
 
 import com.easyrecyclerview.easyrecyclerview.BaseRecyclerAdapter;
@@ -34,11 +35,11 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
     /**
      * Constructor
      *
-     * @param activity
+     * @param context
      */
-    public EasyMultiAdapter(Activity activity, Builder builder) {
+    public EasyMultiAdapter(Context context, Builder builder) {
+        super(context);
 
-        super(activity);
         this.items = builder.items;
         this.types = builder.types;
     }
@@ -128,13 +129,13 @@ public class EasyMultiAdapter<Item extends ItemViewType> extends BaseRecyclerAda
             return this;
         }
 
-        public EasyMultiAdapter build(Activity activity) {
+        public EasyMultiAdapter build(Context context) {
 
             if (this.items == null) this.items = new ArrayList<>();
             if (this.types == null || types.size() == 0)
                 throw new RuntimeException("You should define at least one view type");
 
-            return new EasyMultiAdapter(activity, this);
+            return new EasyMultiAdapter(context, this);
         }
     }
 

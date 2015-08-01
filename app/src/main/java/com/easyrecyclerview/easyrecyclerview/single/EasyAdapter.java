@@ -1,6 +1,7 @@
 package com.easyrecyclerview.easyrecyclerview.single;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.view.ViewGroup;
@@ -44,11 +45,11 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
     /**
      * Constructor
      *
-     * @param activity
+     * @param context
      */
-    public EasyAdapter(Activity activity, Builder builder) {
+    public EasyAdapter(Context context, Builder builder) {
+        super(context);
 
-        super(activity);
         this.items = builder.items;
         this.listCallbacks = builder.listCallbacks;
         this.layoutId = builder.layoutId;
@@ -178,9 +179,8 @@ public class EasyAdapter<ViewHolder extends BaseViewHolder, Item> extends BaseRe
             return this;
         }
 
-        public EasyAdapter build(Activity activity) {
-
-            return new EasyAdapter(activity, this);
+        public EasyAdapter build(Context context) {
+            return new EasyAdapter(context, this);
         }
     }
 }
