@@ -1,3 +1,5 @@
+#[DEPRECATED] - remade from scratch [Least](https://github.com/c0nnector/Least)
+
 # Easy Recyclerview
 The fastest way to use a recyclerview. Create a damn list with (almost)one line of code.
 
