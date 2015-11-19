@@ -23,3 +23,5 @@ dependencies {
 	        compile 'com.github.c0nnector:easyrecyclerview:1.6.5'
 	}
 ```
+
+#Ready!
